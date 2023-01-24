@@ -1,0 +1,1 @@
+const solution = (n, numlist) => numlist.filter(num => Number.isInteger(num / n))
