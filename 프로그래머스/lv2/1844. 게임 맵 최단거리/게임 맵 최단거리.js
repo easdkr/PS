@@ -6,6 +6,7 @@ function solution(maps) {
     const queue = [];
     const n = maps.length, m = maps[0].length;
     queue.push([0, 0]);
+    visited[0][0] = 0;
     while (queue.length > 0) {
         for (let j = 0, len = queue.length; j < len; ++j) {
             const [x, y] = queue.shift();
