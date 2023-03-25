@@ -8,7 +8,10 @@ function solution(board){
     let maxSide = 0;
     const height = board.length, width = board[0].length;
     
-    if (height < 2 || width < 2) return 1; 
+    if (height < 2 || width < 2){
+        if(!board.filter(row => row.filter(elem => elem).flat()).length) return 0;
+        return 1;
+    } 
     
     for (let cIndex = 1; cIndex < height; ++cIndex)
         for (let rIndex = 1; rIndex < width; ++rIndex){
