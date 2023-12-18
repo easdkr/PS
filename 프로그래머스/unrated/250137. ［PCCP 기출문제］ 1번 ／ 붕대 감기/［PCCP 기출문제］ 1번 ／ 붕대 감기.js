@@ -18,9 +18,9 @@ function solution(bandage, health, attacks) {
         if (timeDiff > 0)
             health = Math.min(maxHealth, health + calculateHealthing(bandage, Math.floor(timeDiff / skillTime), timeDiff % skillTime));
         
-        if (health - damage <= 0) return -1;
-        
         health -= damage;
+        
+        if (health <= 0) return -1;
         
         preAttackTime = attackTime;
     }
