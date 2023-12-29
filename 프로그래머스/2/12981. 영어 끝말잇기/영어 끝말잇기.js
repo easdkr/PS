@@ -2,7 +2,7 @@
  * n : 참여자 수
  * words : 끝말잇기 단어 배열\
  * 참여자 번호 = (index % n + 1); 
- * 탈락 시 차례 = Math.ceil(index / n)
+ * 탈락 시 차례 = Math.ceil((index + 1) / n)
  */
 function solution(n, words) {
   // Record<string, boolean>
